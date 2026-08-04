@@ -1,0 +1,38 @@
+# Build artifacts
+*.o
+*.obj
+*.out
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Build directories
+build/
+bin/
+
+# Debug / profiling artifacts
+*.dSYM/
+*.gcda
+*.gcno
+*.gcov
+
+# Generated model/data outputs
+model/
+models/
+output/
+outputs/
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
