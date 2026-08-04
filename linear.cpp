@@ -4,10 +4,7 @@
 const double epsilon = 1e-5;
 
 double predict(double x, double weight, double bias) {
-
-  double z = weight * x + bias;
-
-  return z;
+  return weight * x + bias;
 }
 
 double mse(const std::vector<double> &X, const std::vector<double> &Y,
@@ -103,17 +100,40 @@ int main() {
   std::cout << "dL/db: " << gradient_bias(X, Y, weight, bias) << '\n';
   */
 
-  std::cout << "analytical dL/dw: " << gradient_weight(X, Y, weight, bias)
+  /*
+    std::cout << "analytical dL/dw: " << gradient_weight(X, Y, weight, bias)
+              << '\n';
+
+    std::cout << "numerical  dL/dw: "
+              << numerical_gradient_weight(X, Y, weight, bias, epsilon) << '\n';
+
+    std::cout << "analytical dL/db: " << gradient_bias(X, Y, weight, bias)
+              << '\n';
+
+    std::cout << "numerical  dL/db: "
+              << numerical_gradient_bias(X, Y, weight, bias, epsilon) << '\n';
+  */
+
+  double lr = 0.01;
+  int epochs = 10000;
+
+  for (int epoch = 0; epoch < epochs; ++epoch) {
+    double dw = gradient_weight(X, Y, weight, bias);
+    double db = gradient_bias(X, Y, weight, bias);
+
+    weight = weight - lr * dw;
+    bias = bias - lr * db;
+
+    if (epoch % 100 == 0) {
+      std::cout << "epoch: " << epoch << " loss: " << mse(X, Y, weight, bias)
+                << '\n';
+    }
+  }
+
+  double unseen_x = 10.0;
+
+  std::cout << "prediction for x=10: " << predict(unseen_x, weight, bias)
             << '\n';
-
-  std::cout << "numerical  dL/dw: "
-            << numerical_gradient_weight(X, Y, weight, bias, epsilon) << '\n';
-
-  std::cout << "analytical dL/db: " << gradient_bias(X, Y, weight, bias)
-            << '\n';
-
-  std::cout << "numerical  dL/db: "
-            << numerical_gradient_bias(X, Y, weight, bias, epsilon) << '\n';
 
   return 0;
 }
