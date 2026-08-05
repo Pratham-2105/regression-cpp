@@ -1,39 +1,15 @@
 # Build artifacts
-*.o
-*.obj
-*.out
-*.exe
-*.dll
-*.so
-*.dylib
-linear
-
-# Build directories
 build/
-bin/
+*.o
 
-# Debug / profiling artifacts
-*.dSYM/
-*.gcda
-*.gcno
-*.gcov
+# Compiled executables (no extension, produced by make)
+/tests/test_metrics
+/tests/test_linear_scaled
+/tests/test_logistic
+/examples/binary_classification
 
-# Generated model/data outputs
-model/
-models/
-output/
-outputs/
+# The scalar reference binary
+/linear
 
-# Editor / IDE
-.vscode/
-.idea/
-*.swp
-*.swo
-*~
-
-# OS files
-.DS_Store
-Thumbs.db
-
-# Logs
-*.log
+# Editor / OS cruft
+compile_commands.json
