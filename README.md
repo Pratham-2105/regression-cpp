@@ -21,24 +21,25 @@ project to understand how these models work underneath the abstractions.
 
 ## Project layout
 
+```
 regression-cpp/
-├── linear.cpp # scalar reference implementation
+├── linear.cpp                    # scalar reference implementation
 ├── include/
-│ ├── linear_regression.hpp # multi-feature linear model
-│ ├── logistic_regression.hpp # (in progress)
-│ ├── dataset.hpp # StandardScaler
-│ └── metrics.hpp # evaluation metrics
+│   ├── linear_regression.hpp     # multi-feature linear model
+│   ├── logistic_regression.hpp   # (in progress)
+│   ├── dataset.hpp               # StandardScaler
+│   └── metrics.hpp               # evaluation metrics
 ├── src/
-│ ├── linear_regression.cpp
-│ ├── logistic_regression.cpp # (in progress)
-│ ├── dataset.cpp
-│ └── metrics.cpp
+│   ├── linear_regression.cpp
+│   ├── logistic_regression.cpp   # (in progress)
+│   ├── dataset.cpp
+│   └── metrics.cpp
 ├── tests/
-│ ├── test_linear_scaled.cpp # linear model + scaler end-to-end
-│ ├── test_metrics.cpp # metric correctness checks
-│ └── test_logistic.cpp # (in progress)
-└── compile_flags.txt # include path for editor tooling
-
+│   ├── test_linear_scaled.cpp    # linear model + scaler end-to-end
+│   ├── test_metrics.cpp          # metric correctness checks
+│   └── test_logistic.cpp         # (in progress)
+└── compile_flags.txt             # include path for editor tooling
+```
 
 ## Building
 
