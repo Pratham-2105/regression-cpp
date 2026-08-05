@@ -1,5 +1,5 @@
-#include "dataset.hpp"
-#include "linear_regression.hpp"
+#include "../include/dataset.hpp"
+#include "../include/linear_regression.hpp"
 
 #include <iostream>
 
