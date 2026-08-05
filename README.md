@@ -89,9 +89,9 @@ Two things this project makes concrete:
 - [x] Multi-feature linear regression
 - [x] Feature standardization
 - [x] Evaluation metrics
-- [ ] Logistic regression
-- [ ] Worked examples (house prices, binary classification)
-- [ ] Makefile
+- [x] Logistic regression
+- [x] Worked examples (binary classification)
+- [x] Makefile
 
 ## License
 
