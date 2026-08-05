@@ -84,6 +84,7 @@ void LinearRegression::fit(const std::vector<std::vector<double>> &X,
     }
     if (tol > 0.0 && l < tol) {
       std::cout << "converged at epoch " << epoch << " loss: " << l << '\n';
+      return;
     }
   }
 }
